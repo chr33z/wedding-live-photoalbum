@@ -1,0 +1,227 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.page>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-weight: normal;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #bf9f3f;
+    display: inline-block;
+    padding: 12px 24px;
+    cursor: pointer;
+    background-color: white;
+}
+
+input#verification-input {
+    padding: 12px 24px;
+    border: 1px solid #bf9f3f;
+    font-family: "Josefin Slab", serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.file-list {
+    list-style: none;
+    width: 60%;
+    padding: 16px 32px;
+}
+
+.file-list>li {
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.description {
+    width: 80%;
+    padding: 16px 32px;
+    color: unset;
+    transition: all 0.5s;
+}
+
+.description.collapsed {
+    max-height: 0px;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.successfull-message {
+    padding: 16px;
+    color: #678c61;
+    font-weight: bold;
+}
+
+.error-message {
+    padding: 16px;
+    color: #ac5f66;
+    font-weight: bold;
+}
+
+.impressum {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 8px;
+    text-align: center;
+    font-size: smaller;
+}
+
+.impressum>p {
+    padding: 2px;
+    margin: 0px;
+}
+
+.impressum>a {
+    color: unset;
+    text-decoration: none;
+}
+
+.impressum>a p {
+    padding: 2px;
+    margin: 0px;
+}
+
+/* Button */
+
+div.submitButton {
+    font-family: "Josefin Slab", serif;
+    display: inline-block;
+    padding: 12px 24px;
+    border: 0.1em solid #bf9f3f;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s;
+    background-color: white;
+}
+
+div.submitButton:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.icon-text {
+    margin-left: 10px;
+}
+
+/* Admin link */
+
+.admin-link {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+/* Spinner */
+
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-container>span {
+    color: #bf9f3f;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.lds-heart {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg);
+    transform-origin: 40px 40px;
+}
+
+.lds-heart div {
+    top: 32px;
+    left: 32px;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: #bf9f3f;
+    animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.lds-heart div:after,
+.lds-heart div:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: #bf9f3f;
+}
+
+.lds-heart div:before {
+    left: -24px;
+    border-radius: 50% 0 0 50%;
+}
+
+.lds-heart div:after {
+    top: -24px;
+    border-radius: 50% 50% 0 0;
+}
+
+@keyframes lds-heart {
+    0% {
+        transform: scale(0.95);
+    }
+
+    5% {
+        transform: scale(1.1);
+    }
+
+    39% {
+        transform: scale(0.85);
+    }
+
+    45% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
